@@ -6,7 +6,7 @@
 
 <!-- ── SEO: this is what ranks for the name ── -->
 <title>Brandon David Cole — Brand Executive &amp; Founder, VDO Aigency</title>
-<meta name="description" content="Brandon David Cole is a brand and content executive with 20+ years in professional post-production. Founder of VDO Aigency and Fractional Chief Brand Officer to a private family office and its portfolio companies. NYU Tisch.">
+<meta name="description" content="Brandon David Cole is a brand and content executive with 20+ years in professional post-production. Founder of VDO Aigency and Fractional Chief Brand Officer to a private family office and its portfolio companies. NYU Tisch and UCLA Anderson.">
 <meta name="author" content="Brandon David Cole">
 <link rel="canonical" href="https://brandondavidcole.com/">
 <meta property="og:url" content="https://brandondavidcole.com/">
@@ -15,6 +15,7 @@
 <meta property="og:type" content="profile">
 <meta property="og:title" content="Brandon David Cole — Brand Executive">
 <meta property="og:description" content="Brand & content executive. Founder, VDO Aigency. Fractional Chief Brand Officer.">
+<meta property="og:image" content="https://brandondavidcole.com/brandon-david-cole.jpg">
 <meta property="profile:first_name" content="Brandon">
 <meta property="profile:last_name" content="Cole">
 
@@ -28,10 +29,11 @@
   "familyName": "Cole",
   "jobTitle": "Brand Executive",
   "description": "Brand and content executive with 20+ years in professional post-production. Founder of VDO Aigency and Fractional Chief Brand Officer to a private family office and its portfolio companies.",
-  "alumniOf": {
-    "@type": "CollegeOrUniversity",
-    "name": "New York University, Tisch School of the Arts"
-  },
+  "image": "https://brandondavidcole.com/brandon-david-cole.jpg",
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "New York University, Tisch School of the Arts" },
+    { "@type": "CollegeOrUniversity", "name": "UCLA Anderson School of Management" }
+  ],
   "worksFor": {
     "@type": "Organization",
     "name": "VDO Aigency"
@@ -91,7 +93,11 @@
   .topbar .contact:hover{color:var(--ink);border-color:var(--accent)}
 
   /* ── hero ── */
-  .hero{padding:88px 0 72px}
+  .hero{padding:72px 0 64px}
+  .hero-grid{display:grid;grid-template-columns:1.4fr .9fr;gap:48px;align-items:center}
+  .hero-photo{margin:0}
+  .hero-photo img{width:100%;height:auto;display:block;border:1px solid var(--line);background:#fff}
+  .hero-photo figcaption{font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:12px;text-align:center}
   .eyebrow{
     font-family:"Space Mono",monospace;font-size:12px;
     letter-spacing:.28em;text-transform:uppercase;color:var(--accent);
@@ -99,7 +105,7 @@
   }
   .hero h1{
     font-family:"Archivo",sans-serif;font-weight:900;
-    font-size:clamp(52px,10vw,112px);
+    font-size:clamp(46px,7.5vw,86px);
     line-height:.92;letter-spacing:-.02em;
     margin-bottom:34px;
   }
@@ -178,6 +184,10 @@
     .rise{animation:none;opacity:1;transform:none}
   }
 
+  @media (max-width:720px){
+    .hero-grid{grid-template-columns:1fr;gap:34px}
+    .hero-photo{max-width:320px;margin:0 auto}
+  }
   @media (max-width:560px){
     body{font-size:17px}
     .hero{padding:60px 0 54px}
@@ -195,14 +205,22 @@
   </div>
 
   <header class="hero">
-    <div class="eyebrow rise d1">Brand &middot; Content &middot; Post</div>
-    <h1 class="rise d2">Brandon<br>David Cole</h1>
-    <div class="rule rise d3"></div>
-    <p class="standfirst rise d4">
-      A brand executive who came up through the edit bay — two decades turning
-      raw footage into stories that hold attention, now building the brands
-      behind the companies that need to be <em>seen</em>.
-    </p>
+    <div class="hero-grid">
+      <div class="hero-text">
+        <div class="eyebrow rise d1">Brand &middot; Content &middot; Post</div>
+        <h1 class="rise d2">Brandon<br>David Cole</h1>
+        <div class="rule rise d3"></div>
+        <p class="standfirst rise d4">
+          A brand executive who came up through the edit bay — two decades turning
+          raw footage into stories that hold attention, now building the brands
+          behind the companies that need to be <em>seen</em>.
+        </p>
+      </div>
+      <figure class="hero-photo rise d3">
+        <img src="brandon-david-cole.jpg" alt="Brandon David Cole" width="1000" height="1333">
+        <figcaption>Brandon David Cole</figcaption>
+      </figure>
+    </div>
   </header>
 
   <section>
@@ -226,9 +244,9 @@
       twenty years in professional post-production, built across reality television and
       long-form content. He is the founder of VDO Aigency, an AI-powered content production
       and brand studio, and serves as Fractional Chief Brand Officer to a private family
-      office and its portfolio companies. A graduate of New York University's Tisch School
-      of the Arts, he works where editorial craft meets brand strategy — the discipline of
-      the edit applied to how companies are seen.
+      office and its portfolio companies. He attended film school at New York University's Tisch School
+      of the Arts and business school at UCLA Anderson, and works where editorial craft meets
+      brand strategy — the discipline of the edit applied to how companies are seen.
     </p>
   </section>
 
@@ -238,7 +256,8 @@
       <li><span class="yr">Now</span><span>Founder, VDO Aigency</span></li>
       <li><span class="yr">Now</span><span>Fractional Chief Brand Officer — family office &amp; portfolio brands</span></li>
       <li><span class="yr">20+ yrs</span><span>Professional post-production — reality television &amp; long-form content</span></li>
-      <li><span class="yr">Edu</span><span>New York University, Tisch School of the Arts</span></li>
+      <li><span class="yr">Edu</span><span>New York University, Tisch School of the Arts — film</span></li>
+      <li><span class="yr">Edu</span><span>UCLA Anderson School of Management — business</span></li>
     </ul>
   </section>
 
