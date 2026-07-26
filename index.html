@@ -40,8 +40,8 @@
   },
   "sameAs": [
     "https://www.imdb.com/name/nm0170463/",
-    "https://www.linkedin.com/in/REPLACE-ME",
-    "https://REPLACE-WITH-AGENCY-URL"
+    "https://www.linkedin.com/in/brandondavidcole/",
+    "https://thevdoaigency.com"
   ]
 }
 </script>
@@ -175,6 +175,9 @@
     font-family:"Space Mono",monospace;font-size:12px;
     letter-spacing:.1em;text-transform:uppercase;color:var(--muted);
   }
+  .footer-links{display:flex;gap:20px;flex-wrap:wrap}
+  .footer-links a{color:var(--muted);text-decoration:none;border-bottom:1px solid transparent;padding-bottom:2px;transition:color .2s,border-color .2s}
+  .footer-links a:hover{color:var(--ink);border-color:var(--accent)}
 
   /* ── entrance motion ── */
   .rise{opacity:0;transform:translateY(14px);animation:rise .8s cubic-bezier(.2,.7,.2,1) forwards}
@@ -201,7 +204,7 @@
 
   <div class="topbar">
     <a class="monogram" href="/">BDC<span>.</span></a>
-    <a class="contact" href="mailto:REPLACE@YOURDOMAIN.com">Contact</a>
+    <a class="contact" href="mailto:brandon@thevdoaigency.com">Contact</a>
   </div>
 
   <header class="hero">
@@ -265,13 +268,18 @@
     <div class="sec-label">Verified</div>
     <div class="links">
       <a href="https://www.imdb.com/name/nm0170463/" target="_blank" rel="noopener">IMDb<span class="ext">↗</span></a>
-      <a href="https://www.linkedin.com/in/REPLACE-ME" target="_blank" rel="noopener">LinkedIn<span class="ext">↗</span></a>
-      <a href="https://REPLACE-WITH-AGENCY-URL" target="_blank" rel="noopener">VDO Aigency<span class="ext">↗</span></a>
+      <a href="https://www.linkedin.com/in/brandondavidcole/" target="_blank" rel="noopener">LinkedIn<span class="ext">↗</span></a>
+      <a href="https://thevdoaigency.com" target="_blank" rel="noopener">VDO Aigency<span class="ext">↗</span></a>
     </div>
   </section>
 
   <footer>
     <span>Brandon David Cole</span>
+    <nav class="footer-links">
+      <a href="https://www.linkedin.com/in/brandondavidcole/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.imdb.com/name/nm0170463/" target="_blank" rel="noopener">IMDb</a>
+      <a href="https://thevdoaigency.com" target="_blank" rel="noopener">VDO Aigency</a>
+    </nav>
     <span>&copy; 2026</span>
   </footer>
 
