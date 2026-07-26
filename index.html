@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ── SEO: this is what ranks for the name ── -->
+<title>Brandon David Cole — Brand Executive &amp; Founder, VDO Aigency</title>
+<meta name="description" content="Brandon David Cole is a brand and content executive with 20+ years in professional post-production. Founder of VDO Aigency and Fractional Chief Brand Officer to a private family office and its portfolio companies. NYU Tisch.">
+<meta name="author" content="Brandon David Cole">
+<link rel="canonical" href="https://brandondavidcole.com/">
+<meta property="og:url" content="https://brandondavidcole.com/">
+
+<!-- Open Graph so the card looks clean when shared -->
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Brandon David Cole — Brand Executive">
+<meta property="og:description" content="Brand & content executive. Founder, VDO Aigency. Fractional Chief Brand Officer.">
+<meta property="profile:first_name" content="Brandon">
+<meta property="profile:last_name" content="Cole">
+
+<!-- Structured data: tells Google exactly who this is + which links are the same person -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Brandon David Cole",
+  "givenName": "Brandon",
+  "familyName": "Cole",
+  "jobTitle": "Brand Executive",
+  "description": "Brand and content executive with 20+ years in professional post-production. Founder of VDO Aigency and Fractional Chief Brand Officer to a private family office and its portfolio companies.",
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "New York University, Tisch School of the Arts"
+  },
+  "worksFor": {
+    "@type": "Organization",
+    "name": "VDO Aigency"
+  },
+  "sameAs": [
+    "https://www.imdb.com/name/nm0170463/",
+    "https://www.linkedin.com/in/REPLACE-ME",
+    "https://REPLACE-WITH-AGENCY-URL"
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800;900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --paper:#F6F6F2;
+    --ink:#17171B;
+    --muted:#63636A;
+    --line:#E3E2DA;
+    --accent:#17453E;
+    --accent-soft:rgba(23,69,62,.07);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Newsreader",Georgia,serif;
+    font-size:18px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  .wrap{max-width:920px;margin:0 auto;padding:0 28px}
+
+  /* ── top bar ── */
+  .topbar{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:26px 0;border-bottom:1px solid var(--line);
+  }
+  .monogram{
+    font-family:"Archivo",sans-serif;font-weight:900;
+    font-size:15px;letter-spacing:.14em;color:var(--ink);
+    text-decoration:none;
+  }
+  .monogram span{color:var(--accent)}
+  .topbar .contact{
+    font-family:"Space Mono",monospace;font-size:12px;
+    letter-spacing:.12em;text-transform:uppercase;
+    color:var(--muted);text-decoration:none;
+    border-bottom:1px solid transparent;padding-bottom:2px;
+    transition:color .2s,border-color .2s;
+  }
+  .topbar .contact:hover{color:var(--ink);border-color:var(--accent)}
+
+  /* ── hero ── */
+  .hero{padding:88px 0 72px}
+  .eyebrow{
+    font-family:"Space Mono",monospace;font-size:12px;
+    letter-spacing:.28em;text-transform:uppercase;color:var(--accent);
+    margin-bottom:30px;
+  }
+  .hero h1{
+    font-family:"Archivo",sans-serif;font-weight:900;
+    font-size:clamp(52px,10vw,112px);
+    line-height:.92;letter-spacing:-.02em;
+    margin-bottom:34px;
+  }
+  .rule{width:64px;height:3px;background:var(--accent);margin-bottom:34px}
+  .standfirst{
+    font-size:clamp(21px,2.6vw,27px);
+    line-height:1.4;max-width:32ch;color:var(--ink);
+    font-weight:400;
+  }
+  .standfirst em{font-style:italic;color:var(--accent)}
+
+  /* ── section shell ── */
+  section{padding:52px 0;border-top:1px solid var(--line)}
+  .sec-label{
+    font-family:"Space Mono",monospace;font-size:12px;
+    letter-spacing:.24em;text-transform:uppercase;color:var(--muted);
+    margin-bottom:28px;
+  }
+
+  /* ── currently: credit rows ── */
+  .credits{display:grid;gap:2px}
+  .credit-row{
+    display:grid;grid-template-columns:1fr;gap:4px;
+    padding:20px 0;border-bottom:1px solid var(--line);
+  }
+  .credit-row:last-child{border-bottom:0}
+  .credit-role{
+    font-family:"Archivo",sans-serif;font-weight:800;
+    font-size:22px;letter-spacing:-.01em;
+  }
+  .credit-org{color:var(--muted);font-size:17px}
+
+  /* ── profile prose ── */
+  .prose{max-width:60ch;font-size:20px;line-height:1.62}
+  .prose strong{font-weight:500}
+
+  /* ── background list ── */
+  .bg-list{list-style:none;display:grid;gap:0}
+  .bg-list li{
+    display:flex;gap:18px;align-items:baseline;
+    padding:16px 0;border-bottom:1px solid var(--line);
+    font-size:18px;
+  }
+  .bg-list li:last-child{border-bottom:0}
+  .bg-list .yr{
+    font-family:"Space Mono",monospace;font-size:12px;
+    letter-spacing:.08em;color:var(--accent);white-space:nowrap;
+    min-width:66px;padding-top:3px;
+  }
+
+  /* ── verified links ── */
+  .links{display:flex;flex-wrap:wrap;gap:12px}
+  .links a{
+    font-family:"Archivo",sans-serif;font-weight:600;font-size:15px;
+    letter-spacing:.01em;text-decoration:none;color:var(--ink);
+    border:1px solid var(--line);border-radius:2px;
+    padding:12px 18px;background:#fff;
+    transition:border-color .2s,color .2s,background .2s;
+  }
+  .links a:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-soft)}
+  .links .ext{font-family:"Space Mono",monospace;font-size:11px;color:var(--muted);margin-left:8px}
+
+  /* ── footer ── */
+  footer{
+    padding:44px 0 64px;border-top:1px solid var(--line);
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;
+    font-family:"Space Mono",monospace;font-size:12px;
+    letter-spacing:.1em;text-transform:uppercase;color:var(--muted);
+  }
+
+  /* ── entrance motion ── */
+  .rise{opacity:0;transform:translateY(14px);animation:rise .8s cubic-bezier(.2,.7,.2,1) forwards}
+  .d1{animation-delay:.05s}.d2{animation-delay:.16s}.d3{animation-delay:.27s}.d4{animation-delay:.38s}
+  @keyframes rise{to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion:reduce){
+    .rise{animation:none;opacity:1;transform:none}
+  }
+
+  @media (max-width:560px){
+    body{font-size:17px}
+    .hero{padding:60px 0 54px}
+    .prose{font-size:18px}
+    .bg-list li{flex-direction:column;gap:4px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="monogram" href="/">BDC<span>.</span></a>
+    <a class="contact" href="mailto:REPLACE@YOURDOMAIN.com">Contact</a>
+  </div>
+
+  <header class="hero">
+    <div class="eyebrow rise d1">Brand &middot; Content &middot; Post</div>
+    <h1 class="rise d2">Brandon<br>David Cole</h1>
+    <div class="rule rise d3"></div>
+    <p class="standfirst rise d4">
+      A brand executive who came up through the edit bay — two decades turning
+      raw footage into stories that hold attention, now building the brands
+      behind the companies that need to be <em>seen</em>.
+    </p>
+  </header>
+
+  <section>
+    <div class="sec-label">Currently</div>
+    <div class="credits">
+      <div class="credit-row">
+        <div class="credit-role">Founder</div>
+        <div class="credit-org">VDO Aigency — AI-powered content production &amp; brand studio</div>
+      </div>
+      <div class="credit-row">
+        <div class="credit-role">Fractional Chief Brand Officer</div>
+        <div class="credit-org">Private family office &amp; its portfolio brands</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-label">Profile</div>
+    <p class="prose">
+      <strong>Brandon David Cole</strong> is a brand and content executive with more than
+      twenty years in professional post-production, built across reality television and
+      long-form content. He is the founder of VDO Aigency, an AI-powered content production
+      and brand studio, and serves as Fractional Chief Brand Officer to a private family
+      office and its portfolio companies. A graduate of New York University's Tisch School
+      of the Arts, he works where editorial craft meets brand strategy — the discipline of
+      the edit applied to how companies are seen.
+    </p>
+  </section>
+
+  <section>
+    <div class="sec-label">Selected background</div>
+    <ul class="bg-list">
+      <li><span class="yr">Now</span><span>Founder, VDO Aigency</span></li>
+      <li><span class="yr">Now</span><span>Fractional Chief Brand Officer — family office &amp; portfolio brands</span></li>
+      <li><span class="yr">20+ yrs</span><span>Professional post-production — reality television &amp; long-form content</span></li>
+      <li><span class="yr">Edu</span><span>New York University, Tisch School of the Arts</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="sec-label">Verified</div>
+    <div class="links">
+      <a href="https://www.imdb.com/name/nm0170463/" target="_blank" rel="noopener">IMDb<span class="ext">↗</span></a>
+      <a href="https://www.linkedin.com/in/REPLACE-ME" target="_blank" rel="noopener">LinkedIn<span class="ext">↗</span></a>
+      <a href="https://REPLACE-WITH-AGENCY-URL" target="_blank" rel="noopener">VDO Aigency<span class="ext">↗</span></a>
+    </div>
+  </section>
+
+  <footer>
+    <span>Brandon David Cole</span>
+    <span>&copy; 2026</span>
+  </footer>
+
+</div>
+</body>
+</html>
