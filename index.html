@@ -1,290 +1,178 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Follow Brando — rebuilding the second half of life through stories about work, money, family, health, identity and freedom from Southeast Asia." />
+  <title>Follow Brando</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bitter:ital,wght@0,400;0,500;0,700;1,400&family=Rubik+Dirt&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#213549;--red:#E0483C;--paper:#FCFBF8;--ash:#9B968B;--max:1240px;--pad:clamp(22px,4vw,56px)}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--navy);font-family:Bitter,Georgia,serif;line-height:1.55}
+    a{color:inherit;text-decoration:none} img{max-width:100%;display:block}
+    .wrap{width:min(var(--max),calc(100% - var(--pad)*2));margin:auto}
+    .nav{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(33,53,73,.22)}
+    .brand,.display{font-family:Anton,Impact,sans-serif;text-transform:uppercase;letter-spacing:.01em}.display{line-height:.98}.brand{font-size:1.35rem}.navlinks{display:flex;gap:26px;font:700 .73rem/1 Bitter,serif;text-transform:uppercase;letter-spacing:.12em}.navlinks a:hover{color:var(--red)}
+    .hero{min-height:590px;display:grid;grid-template-columns:minmax(0,1.45fr) minmax(260px,.55fr);gap:8vw;align-items:center;padding:70px 0 90px}.eyebrow{font:700 .72rem/1 Bitter,serif;letter-spacing:.16em;text-transform:uppercase;color:var(--ash);margin-bottom:22px}.hero h1{font-size:clamp(4.6rem,10.4vw,9.7rem);line-height:.98;margin:0;max-width:900px}.hero h1 span{color:var(--red)}.dek{font-size:clamp(1rem,1.4vw,1.24rem);max-width:690px;margin:34px 0 30px}.textlink{display:inline-block;font:700 .78rem/1 Bitter,serif;text-transform:uppercase;letter-spacing:.12em;border-bottom:2px solid var(--red);padding-bottom:7px}.hero-note{align-self:end;margin-bottom:52px;border-left:1px solid var(--ash);padding-left:22px;font-size:.86rem;color:#4f5e6a}.stamp{font-family:'Rubik Dirt',Anton,sans-serif;text-transform:uppercase;display:inline-flex;align-items:center;justify-content:center;color:var(--red);line-height:1;letter-spacing:.02em;background-repeat:no-repeat;background-position:center;background-size:100% 100%;transform:rotate(-5deg);white-space:nowrap;text-align:center}.stamp-short{background-image:url('frame-short.png');width:202px;height:112px;padding:16px 27px;font-size:1.22rem}.stamp-medium{background-image:url('frame-medium.png');width:320px;height:112px;padding:16px 32px;font-size:1.22rem}.stamp-wide{background-image:url('frame-wide.png');width:480px;height:112px;padding:16px 37px;font-size:1.32rem}.stamp-round{background-image:url('frame-round.png');width:300px;height:300px;padding:0 34px;font-size:1.55rem;transform:rotate(-6deg)}.hero .stamp{margin-top:30px}
+    section{padding:100px 0;position:relative}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;border-top:1px solid rgba(33,53,73,.3);padding-top:16px;margin-bottom:38px}.section-head h2{font-size:clamp(2.8rem,5vw,5.4rem);line-height:.98;margin:0}.section-index{font:700 .7rem Bitter,serif;letter-spacing:.15em;color:var(--ash)}
+    .feature{display:grid;grid-template-columns:1.3fr .7fr;gap:clamp(30px,5vw,72px);align-items:center}.media{aspect-ratio:16/9;background:var(--navy);position:relative;overflow:hidden}.media:before{content:"LATEST FILM";position:absolute;inset:22px auto auto 22px;color:var(--paper);font:700 .68rem Bitter,serif;letter-spacing:.14em}.media:after{content:"ADD CURRENT YOUTUBE THUMBNAIL";position:absolute;inset:auto 22px 22px 22px;color:var(--ash);font:700 .65rem Bitter,serif;letter-spacing:.12em}.play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:72px;height:72px;border:1px solid var(--paper);border-radius:50%}.play:after{content:"";position:absolute;left:30px;top:23px;border-left:18px solid var(--paper);border-top:12px solid transparent;border-bottom:12px solid transparent}.feature-copy h3{font-size:clamp(2.7rem,5vw,5.6rem);line-height:.98;margin:12px 0 22px}.meta{color:var(--ash);font-size:.76rem;text-transform:uppercase;letter-spacing:.1em}
+    .dark{background:var(--navy);color:var(--paper)}.dark .eyebrow{color:var(--ash)}.dispatch{display:grid;grid-template-columns:1fr .85fr;gap:8vw;align-items:end}.dispatch h2{font-size:clamp(4rem,8vw,8rem);line-height:.98;margin:0}.dispatch h2 em{font-style:normal;color:var(--red)}.dispatch-copy{max-width:520px}.form{display:flex;margin-top:28px;border-bottom:1px solid var(--paper)}.form input{flex:1;background:none;border:0;color:var(--paper);font:400 1rem Bitter,serif;padding:14px 0;outline:none}.form button{background:none;border:0;color:var(--paper);font:700 .75rem Bitter,serif;letter-spacing:.12em;text-transform:uppercase;cursor:pointer}.form button:hover{color:var(--red)}
+    .about-grid{display:grid;grid-template-columns:.72fr 1.28fr;gap:8vw;align-items:start}.portrait{aspect-ratio:4/5;background:linear-gradient(135deg,#d8d5ce,#aaa69c);position:relative}.about-copy h2{font-size:clamp(3.6rem,7vw,7.3rem);line-height:.98;margin:25px 0 30px}.about-copy p{font-size:1.05rem;max-width:690px}.about-copy p:first-of-type{font-size:1.32rem;line-height:1.45}
+    .escape-card{border:1px solid rgba(33,53,73,.35);padding:clamp(28px,5vw,68px);display:grid;grid-template-columns:1.2fr .8fr;gap:7vw;align-items:end;position:relative}.escape-card h2{font-size:clamp(3.4rem,6.8vw,7rem);line-height:.98;margin:28px 0 0}.escape-copy{max-width:440px}.escape-card .stamp{position:absolute;right:7%;top:-20px}
+    .access{text-align:center;padding:130px 0}.access h2{font-size:clamp(5rem,11vw,11rem);line-height:.98;margin:0 0 38px}.access p{max-width:670px;margin:0 auto 18px}.access .stamp{margin:28px 0 34px}.access .textlink{color:var(--paper)}
+    footer{padding:44px 0 58px;border-top:1px solid rgba(33,53,73,.22)}.foot{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:end}.foot-brand{font-size:2.4rem}.foot small{display:block;color:var(--ash);margin-top:8px}.foot-links{display:flex;gap:20px;font-size:.74rem;text-transform:uppercase;letter-spacing:.1em}.ghost{opacity:.6;margin-top:28px}
+    @media(max-width:780px){.stamp-wide{width:min(480px,92vw);height:auto;aspect-ratio:4.2857/1}.stamp-round{width:240px;height:240px;font-size:1.25rem}.stamp-medium{width:280px;height:98px}.stamp-short{width:180px;height:100px;font-size:1.05rem}.navlinks{display:none}.hero{min-height:auto;grid-template-columns:1fr;padding:70px 0}.hero-note{display:none}.feature,.dispatch,.about-grid,.escape-card{grid-template-columns:1fr}.about-grid{gap:45px}.portrait{max-width:500px}.feature-copy h3{margin-top:10px}.dispatch{gap:50px}.escape-card .stamp{right:24px}.foot{grid-template-columns:1fr}.foot-links{flex-wrap:wrap}.hero h1{font-size:clamp(4rem,19vw,7rem)}}
+  
+    /* Homepage revision: hero is now a single editorial masthead. */
+    .hero{grid-template-columns:1fr;position:relative;overflow:visible;padding-bottom:55px;z-index:1}
+    .hero>div{max-width:980px;position:relative;z-index:2}
+    .hero::after{content:"";position:absolute;right:-555px;bottom:-315px;width:calc((clamp(390px,42vw,650px)) * 3);aspect-ratio:1/1;background:url('frame-round-followbrando.png') center/contain no-repeat;opacity:.075;transform:rotate(-9deg);pointer-events:none;z-index:-1}
+    @media(max-width:780px){.hero::after{width:390px;right:-155px;bottom:-90px;opacity:.06}}
+      .portrait img{display:block;width:100%;height:100%;min-height:560px;object-fit:cover;object-position:center top}
+  
+    .media-thumb:before,.media-thumb:after{content:none!important}
+    .media-thumb img{display:block;width:100%;height:100%;object-fit:cover}
 
-<!-- Site icons -->
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="icon" href="favicon.ico" sizes="any">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-<meta name="theme-color" content="#F6F6F2">
+  
+    #beginning .feature{grid-template-columns:.7fr 1.3fr;align-items:center}
+    #beginning .feature-copy .eyebrow{margin-bottom:14px}
+    #beginning .feature-copy h3{margin-top:0}
+    @media(max-width:780px){
+      #beginning .feature{grid-template-columns:1fr}
+      #beginning .feature-copy{order:1}
+      #beginning .media{order:2}
+    }
 
-<!-- ── SEO: this is what ranks for the name ── -->
-<title>Brandon David Cole — Brand Executive &amp; Founder, VDO Aigency</title>
-<meta name="description" content="Brandon David Cole is a brand and content executive with 20+ years in professional post-production and the founder of The VDO Aigency. NYU Tisch and UCLA Anderson.">
-<meta name="author" content="Brandon David Cole">
-<link rel="canonical" href="https://brandondavidcole.com/">
-<meta property="og:url" content="https://brandondavidcole.com/">
+  
+    #beginning{position:relative;overflow:visible;z-index:2}
+    #beginning .feature{position:relative;z-index:2}
+    #beginning::after{
+      content:"";
+      position:absolute;
+      left:-260px;
+      top:-320px;
+      width:calc((clamp(390px,42vw,650px)) * 3);
+      aspect-ratio:1/1;
+      background:url('june-4th-2022-stamp.png') center/contain no-repeat;
+      opacity:.075;
+      transform:rotate(9deg);
+      pointer-events:none;
+      z-index:-1;
+    }
+    @media(max-width:780px){
+      #beginning::after{
+        width:420px;
+        left:-120px;
+        top:-120px;
+        opacity:.06;
+      }
+    }
 
-<!-- Open Graph so the card looks clean when shared -->
-<meta property="og:type" content="profile">
-<meta property="og:title" content="Brandon David Cole — Brand Executive">
-<meta property="og:description" content="Brand & content executive. Founder, VDO Aigency. Fractional Chief Brand Officer.">
-<meta property="og:image" content="https://brandondavidcole.com/brandon-david-cole.jpg">
-<meta property="profile:first_name" content="Brandon">
-<meta property="profile:last_name" content="Cole">
+  
+    .free-downloads-callout{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin-left:auto;
+    }
+    .free-downloads-callout img{
+      width:42px;
+      height:auto;
+      flex:0 0 auto;
+      transform:rotate(-90deg);
+      transform-origin:center;
+    }
+    .free-downloads-callout a{
+      font-family:'Rubik Dirt',Anton,sans-serif;
+      color:var(--red);
+      font-size:clamp(1rem,1.45vw,1.35rem);
+      line-height:1;
+      text-transform:uppercase;
+      letter-spacing:.02em;
+      border-bottom:2px solid var(--red);
+      padding:7px 0 6px;
+      white-space:nowrap;
+      transform:rotate(-1.5deg);
+    }
+    .free-downloads-callout a:hover{opacity:.72}
+    @media(max-width:780px){
+      .nav{height:auto;min-height:82px;gap:18px;padding:14px 0}
+      .free-downloads-callout{gap:4px}
+      .free-downloads-callout img{width:30px}
+      .free-downloads-callout a{
+        font-size:.88rem;
+        white-space:normal;
+        max-width:150px;
+        text-align:right;
+      }
+    }
 
-<!-- Structured data: tells Google exactly who this is + which links are the same person -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Brandon David Cole",
-  "givenName": "Brandon",
-  "familyName": "Cole",
-  "jobTitle": "Brand Executive",
-  "description": "Brand and content executive with 20+ years in professional post-production. Founder of The VDO Aigency.",
-  "image": "https://brandondavidcole.com/brandon-david-cole.jpg",
-  "alumniOf": [
-    { "@type": "CollegeOrUniversity", "name": "New York University, Tisch School of the Arts" },
-    { "@type": "CollegeOrUniversity", "name": "UCLA Anderson School of Management" }
-  ],
-  "worksFor": {
-    "@type": "Organization",
-    "name": "VDO Aigency"
-  },
-  "sameAs": [
-    "https://www.imdb.com/name/nm0170463/",
-    "https://www.linkedin.com/in/brandondavidcole/",
-    "https://thevdoaigency.com",
-    "https://www.youtube.com/@TheVDOAigency"
-  ]
-}
-</script>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800;900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-
-<style>
-  :root{
-    --paper:#F6F6F2;
-    --ink:#17171B;
-    --muted:#63636A;
-    --line:#E3E2DA;
-    --accent:#17453E;
-    --accent-soft:rgba(23,69,62,.07);
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{-webkit-text-size-adjust:100%}
-  body{
-    background:var(--paper);
-    color:var(--ink);
-    font-family:"Newsreader",Georgia,serif;
-    font-size:18px;
-    line-height:1.55;
-    -webkit-font-smoothing:antialiased;
-    text-rendering:optimizeLegibility;
-  }
-  .wrap{max-width:920px;margin:0 auto;padding:0 28px}
-
-  /* ── top bar ── */
-  .topbar{
-    display:flex;align-items:center;justify-content:space-between;
-    padding:26px 0;border-bottom:1px solid var(--line);
-  }
-  .monogram{
-    font-family:"Archivo",sans-serif;font-weight:900;
-    font-size:15px;letter-spacing:.14em;color:var(--ink);
-    text-decoration:none;
-  }
-  .monogram span{color:var(--accent)}
-  .topbar .contact{
-    font-family:"Space Mono",monospace;font-size:12px;
-    letter-spacing:.12em;text-transform:uppercase;
-    color:var(--muted);text-decoration:none;
-    border-bottom:1px solid transparent;padding-bottom:2px;
-    transition:color .2s,border-color .2s;
-  }
-  .topbar .contact:hover{color:var(--ink);border-color:var(--accent)}
-
-  /* ── hero ── */
-  .hero{padding:72px 0 64px}
-  .hero-grid{display:grid;grid-template-columns:1.4fr .9fr;gap:48px;align-items:center}
-  .hero-photo{margin:0}
-  .hero-photo img{width:100%;height:auto;display:block;border:1px solid var(--line);background:#fff}
-  .hero-photo figcaption{font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:12px;text-align:center}
-  .eyebrow{
-    font-family:"Space Mono",monospace;font-size:12px;
-    letter-spacing:.28em;text-transform:uppercase;color:var(--accent);
-    margin-bottom:30px;
-  }
-  .hero h1{
-    font-family:"Archivo",sans-serif;font-weight:900;
-    font-size:clamp(46px,7.5vw,86px);
-    line-height:.92;letter-spacing:-.02em;
-    margin-bottom:34px;
-  }
-  .rule{width:64px;height:3px;background:var(--accent);margin-bottom:34px}
-  .standfirst{
-    font-size:clamp(21px,2.6vw,27px);
-    line-height:1.4;max-width:32ch;color:var(--ink);
-    font-weight:400;
-  }
-  .standfirst em{font-style:italic;color:var(--accent)}
-
-  /* ── section shell ── */
-  section{padding:52px 0;border-top:1px solid var(--line)}
-  .sec-label{
-    font-family:"Space Mono",monospace;font-size:12px;
-    letter-spacing:.24em;text-transform:uppercase;color:var(--muted);
-    margin-bottom:28px;
-  }
-
-  /* ── currently: credit rows ── */
-  .credits{display:grid;gap:2px}
-  .credit-row{
-    display:grid;grid-template-columns:1fr;gap:4px;
-    padding:20px 0;border-bottom:1px solid var(--line);
-  }
-  .credit-row:last-child{border-bottom:0}
-  .credit-role{
-    font-family:"Archivo",sans-serif;font-weight:800;
-    font-size:22px;letter-spacing:-.01em;
-  }
-  .credit-org{color:var(--muted);font-size:17px}
-
-  /* ── profile prose ── */
-  .prose{max-width:60ch;font-size:20px;line-height:1.62}
-  .prose strong{font-weight:500}
-
-  /* ── background list ── */
-  .bg-list{list-style:none;display:grid;gap:0}
-  .bg-list li{
-    display:flex;gap:18px;align-items:baseline;
-    padding:16px 0;border-bottom:1px solid var(--line);
-    font-size:18px;
-  }
-  .bg-list li:last-child{border-bottom:0}
-  .bg-list .yr{
-    font-family:"Space Mono",monospace;font-size:12px;
-    letter-spacing:.08em;color:var(--accent);white-space:nowrap;
-    min-width:66px;padding-top:3px;
-  }
-
-  /* ── verified links ── */
-  .links{display:flex;flex-wrap:wrap;gap:12px}
-  .links a{
-    font-family:"Archivo",sans-serif;font-weight:600;font-size:15px;
-    letter-spacing:.01em;text-decoration:none;color:var(--ink);
-    border:1px solid var(--line);border-radius:2px;
-    padding:12px 18px;background:#fff;
-    transition:border-color .2s,color .2s,background .2s;
-  }
-  .links a:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-soft)}
-  .links .ext{font-family:"Space Mono",monospace;font-size:11px;color:var(--muted);margin-left:8px}
-
-  /* ── footer ── */
-  footer{
-    padding:44px 0 64px;border-top:1px solid var(--line);
-    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;
-    font-family:"Space Mono",monospace;font-size:12px;
-    letter-spacing:.1em;text-transform:uppercase;color:var(--muted);
-  }
-  .footer-links{display:flex;gap:20px;flex-wrap:wrap}
-  .footer-links a{color:var(--muted);text-decoration:none;border-bottom:1px solid transparent;padding-bottom:2px;transition:color .2s,border-color .2s}
-  .footer-links a:hover{color:var(--ink);border-color:var(--accent)}
-
-  /* ── entrance motion ── */
-  .rise{opacity:0;transform:translateY(14px);animation:rise .8s cubic-bezier(.2,.7,.2,1) forwards}
-  .d1{animation-delay:.05s}.d2{animation-delay:.16s}.d3{animation-delay:.27s}.d4{animation-delay:.38s}
-  @keyframes rise{to{opacity:1;transform:none}}
-  @media (prefers-reduced-motion:reduce){
-    .rise{animation:none;opacity:1;transform:none}
-  }
-
-  @media (max-width:720px){
-    .hero-grid{grid-template-columns:1fr;gap:34px}
-    .hero-photo{max-width:320px;margin:0 auto}
-  }
-  @media (max-width:560px){
-    body{font-size:17px}
-    .hero{padding:60px 0 54px}
-    .prose{font-size:18px}
-    .bg-list li{flex-direction:column;gap:4px}
-  }
-</style>
+  </style>
 </head>
 <body>
-<div class="wrap">
-
-  <div class="topbar">
-    <a class="monogram" href="/">BDC<span>.</span></a>
-    <a class="contact" href="mailto:brandon@thevdoaigency.com">Contact</a>
-  </div>
-
-  <header class="hero">
-    <div class="hero-grid">
-      <div class="hero-text">
-        <div class="eyebrow rise d1">Brand &middot; Content &middot; Post</div>
-        <h1 class="rise d2">Brandon<br>David Cole</h1>
-        <div class="rule rise d3"></div>
-        <p class="standfirst rise d4">
-          A brand executive who came up through the edit bay — two decades turning
-          raw footage into stories that hold attention, now building the brands
-          behind the companies that need to be <em>seen</em>.
-        </p>
-      </div>
-      <figure class="hero-photo rise d3">
-        <img src="brandon-david-cole.jpg" alt="Brandon David Cole" width="1000" height="1333">
-        <figcaption>Brandon David Cole</figcaption>
-      </figure>
+  <header class="wrap nav">
+    <div class="brand">Follow Brando</div>
+    <div class="free-downloads-callout">
+      <img src="arrow-red.png" alt="" aria-hidden="true">
+      <a href="https://follow-brando.kit.com/b35e574e32" target="_blank" rel="noopener">Free tools + downloads</a>
     </div>
   </header>
 
-  <section>
-    <div class="sec-label">Currently</div>
-    <div class="credits">
-      <div class="credit-row">
-        <div class="credit-role">Founder</div>
-        <div class="credit-org">VDO Aigency — AI-powered content production &amp; brand studio</div>
+  <main>
+    <section class="wrap hero">
+      <div>
+        <div class="eyebrow">A field journal from somewhere in Southeast Asia</div>
+        <h1 class="display">REBUILD THE<br><span>SECOND HALF.</span></h1>
+        <p class="dek">Follow Brando is about rebuilding your life after the old version stops working. Southeast Asia is where I’m doing it.</p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section>
-    <div class="sec-label">Profile</div>
-    <p class="prose">
-      <strong>Brandon David Cole</strong> is a brand and content executive with more than
-      twenty years in professional post-production, built across reality television and
-      long-form content. He is the founder of VDO Aigency, an AI-powered content production
-      and brand studio. He attended film school at New York University's Tisch School
-      of the Arts and business school at UCLA Anderson, and works where editorial craft meets
-      brand strategy — the discipline of the edit applied to how companies are seen.
-    </p>
-  </section>
-
-  <section>
-    <div class="sec-label">Selected background</div>
-    <ul class="bg-list">
-      <li><span class="yr">Now</span><span>Founder, VDO Aigency</span></li>
-      <li><span class="yr">20+ yrs</span><span>Professional post-production — reality television &amp; long-form content</span></li>
-      <li><span class="yr">Edu</span><span>New York University, Tisch School of the Arts — film</span></li>
-      <li><span class="yr">Edu</span><span>UCLA Anderson School of Management — business</span></li>
-    </ul>
-  </section>
-
-  <section>
-    <div class="sec-label">Verified</div>
-    <div class="links">
-      <a href="https://www.imdb.com/name/nm0170463/" target="_blank" rel="noopener">IMDb<span class="ext">↗</span></a>
-      <a href="https://www.linkedin.com/in/brandondavidcole/" target="_blank" rel="noopener">LinkedIn<span class="ext">↗</span></a>
-      <a href="https://thevdoaigency.com" target="_blank" rel="noopener">VDO Aigency<span class="ext">↗</span></a>
-    </div>
-  </section>
-
-  <footer>
-    <span>Brandon David Cole</span>
-    <nav class="footer-links">
-      <a href="https://www.linkedin.com/in/brandondavidcole/" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://www.imdb.com/name/nm0170463/" target="_blank" rel="noopener">IMDb</a>
-      <a href="https://thevdoaigency.com" target="_blank" rel="noopener">VDO Aigency</a>
-      <a href="https://www.youtube.com/@TheVDOAigency" target="_blank" rel="noopener">YouTube</a>
-    </nav>
-    <span>&copy; 2026</span>
-  </footer>
-
+    <section id="about" class="wrap">
+      <div class="about-grid">
+        <div class="portrait"><img src="brando-portrait.jpg" alt="Brandon David Cole"></div>
+        <div class="about-copy"><span class="stamp stamp-short">Start here</span><h2 class="display">I didn’t come here<br>to reinvent myself.</h2><p>I’m Brandon David Cole. I started my career directing independent films and producing video content for Dr. Dre.</p><p>By the time I came to Southeast Asia, I had spent twenty years in film and video production — with editorial credits across Netflix, Bravo and MTV, and years producing and building media operations for major corporate brands.</p><p><a class="textlink" href="https://brandondavidcole.com/" target="_blank" rel="noopener">See my professional film &amp; video work →</a></p><p><strong>Then, almost as a sideline, I started pointing the camera at my own life.</strong></p><p>That became Follow Brando.</p><p>Somewhere along the way, Southeast Asia stopped being something I was filming and became my actual life. I built a business here. I became a father. I started a family. And the questions changed.</p><p>Less <em>“Where should I live?”</em> More <em>“What kind of life am I actually building?”</em></p><p>Follow Brando is where I work through that — money, family, work, health, aging, freedom, mistakes and what happens when the life you built the first time no longer fits.</p><p><strong>This is the field journal of the second half.</strong></p>
 </div>
+      </div>
+    </section>
+
+    <section id="beginning" class="wrap" style="z-index:2">
+      <div class="feature">
+        <div class="feature-copy">
+          <div class="eyebrow">FROM THE ARCHIVE · SAIGON</div>
+          <h3 class="display">THE BEGINNING.<br>MY FIRST YEAR IN SAIGON, VIETNAM.</h3>
+          <p>This was my first year in Saigon. I thought I was documenting a place. I didn’t realize I was documenting the beginning of a completely different life.</p>
+          <a class="textlink" href="https://youtu.be/Tigx61tVrJU" target="_blank" rel="noopener">Watch on YouTube →</a>
+        </div>
+        <a class="media media-thumb" href="https://youtu.be/Tigx61tVrJU" target="_blank" rel="noopener" aria-label="Watch The Beginning: My First Year in Saigon, Vietnam">
+          <img src="the-beginning-thumbnail.jpg" alt="This Is Saigon?">
+        </a>
+      </div>
+    </section>
+
+    <section id="dispatches" class="dark">
+      <div class="wrap dispatch">
+        <div><div class="eyebrow">Dispatches from out here</div><h2 class="display">You don’t need<br>another <em>newsletter.</em></h2></div>
+        <div class="dispatch-copy"><p>Neither do I.</p><p>I send something when I have something worth sending — new videos, ideas I’m working through, things I learned the expensive way, and occasional opportunities that don’t make it onto YouTube.</p><a class="textlink light" href="https://follow-brando.kit.com/b35e574e32" target="_blank" rel="noopener">Join the list →</a></div>
+      </div>
+    </section>
+
+    
+
+    <section id="escape" class="wrap">
+      <div class="escape-card"><span class="stamp stamp-short">Free</span><div><div class="eyebrow">For people thinking about leaving</div><h2 class="display">How much does a new life actually cost?</h2></div><div class="escape-copy"><p>The Expat Escape Kit + FU Money Calculator helps you work out the numbers before you blow up your life.</p><a class="textlink" href="https://follow-brando.kit.com/b35e574e32" target="_blank" rel="noopener">Get the kit →</a></div></div>
+    </section>
+
+    <section id="private" class="dark access">
+      <div class="wrap"><div class="eyebrow">Private conversations</div><h2 class="display">Want to talk?</h2><p>I occasionally open a small number of one-on-one conversations with people trying to figure out what comes next — a move, retirement, business change, divorce, reinvention, or simply the realization that the old plan isn’t working anymore.</p><p>I don’t do relocation concierge work. I don’t have a course to sell you. And I probably can’t tell you which SIM card to buy.</p><span class="stamp stamp-wide">Limited availability</span><br><a class="textlink" href="https://follow-brando.kit.com/6248aa79a4" target="_blank" rel="noopener">See what’s open →</a></div>
+    </section>
+  </main>
+
+  <footer><div class="wrap foot"><div><div class="brand foot-brand">Follow Brando</div><small>Somewhere in Southeast Asia. © 2026 Brandon David Cole.</small><span class="stamp stamp-medium ghost">Come back later.</span></div><div class="foot-links"><a href="https://www.youtube.com/@FollowBrando" target="_blank" rel="noopener">YouTube</a><a href="https://thevdoaigency.com" target="_blank" rel="noopener">Professional Work</a><a href="https://follow-brando.kit.com/b35e574e32" target="_blank" rel="noopener">Contact</a></div></div></footer>
 </body>
 </html>
